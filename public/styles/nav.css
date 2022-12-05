@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
+nav {
+  height: 120px;
+  width: auto;
+  background-color: #4056a1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+nav span {
+  font-family: 'Bungee', cursive;
+  text-align: center;
+}
+
+nav div {
+  text-align: end;
+}
