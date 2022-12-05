@@ -3,9 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-
- @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
-
+ 
 html {
   box-sizing: border-box;
 }
@@ -29,4 +27,16 @@ body {
 
  body {
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: #d7971f;
+  background-image: url("/images/beige-paper.png");
+  display: flex;
+  flex-direction: column;
+ }
+
+ main {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
  }
