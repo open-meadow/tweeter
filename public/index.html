@@ -46,7 +46,16 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <section class="new-tweet">
+        <h2>Compose tweet</h2>
+        <form method="POST" action="/tweets">
+          <input name="text" id="tweet-text" placeholder="What are you humming about?"></input>
+          <div>
+            <button type="submit">Tweet</button>
+            <button name="counter" class="counter" form="tweet-text">140</button>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
