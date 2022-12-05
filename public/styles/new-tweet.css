@@ -1,0 +1,35 @@
+.input-bar {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #f4f1ec;
+  width: 100%;
+  padding: 1%;
+  margin: auto;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid rgb(71, 71, 71);
+}
+
+.input-bar::placeholder {
+  color: #545149;
+}
+
+.buttons {
+  margin-top: 1.5%;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-button {
+  background-color: #4152a1;
+  color: white;
+  font-family: 'Bungee', cursive;
+  padding: 1%;
+}
+
+.counter {
+  background: none;
+  border: none;
+  font-family: 'Bungee', cursive;
+  color: #545149;
+}

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <link rel="stylesheet" href="/styles/header.css" type="text/css">
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,11 +37,11 @@
 
     <header>
       <div>
-        <img src="/images/profile-hex.png">
+        <img class="profile-pic" src="/images/profile-hex.png">
       </div>
       <br>
       <div>
-        <h2>Your Name</h2>
+        <h2 class="name">Your Name</h2>
       </div>
     </header>
 
@@ -49,10 +50,11 @@
       <section class="new-tweet">
         <h2>Compose tweet</h2>
         <form method="POST" action="/tweets">
-          <input name="text" id="tweet-text" placeholder="What are you humming about?"></input>
-          <div>
-            <button type="submit">Tweet</button>
-            <button name="counter" class="counter" form="tweet-text">140</button>
+          <!-- <label for="text">Compose tweet:</label> -->
+          <input name="text" id="tweet-text" placeholder="What are you humming about?" class="input-bar"></input>
+          <div class="buttons">
+            <button class="tweet-button" type="submit">Tweet</button>
+            <button class="counter" name="counter" class="counter" form="tweet-text">140</button>
           </div>
         </form>
       </section>

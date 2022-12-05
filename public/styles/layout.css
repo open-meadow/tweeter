@@ -21,21 +21,18 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+
+  /* declare common font */
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- body {
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #d7971f;
-  background-image: url("/images/beige-paper.png");
-  display: flex;
-  flex-direction: column;
- }
-
  .container {
   width: 90%;
   margin: auto;
+  background-color: #f4f1ec;
  }
+

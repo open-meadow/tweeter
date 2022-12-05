@@ -9,7 +9,9 @@ nav {
   padding-right: 1.5em;
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
+  top: 0px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 nav span {
