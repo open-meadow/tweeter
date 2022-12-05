@@ -2,18 +2,25 @@
 
 nav {
   height: 120px;
-  width: auto;
+  width: 100%;
   background-color: #4056a1;
   color: #FFFFFF;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
 }
 
 nav span {
+  display: flex;
+  align-items: center;
   font-family: 'Bungee', cursive;
-  text-align: center;
 }
 
-nav div {
-  text-align: end;
+.nav-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
