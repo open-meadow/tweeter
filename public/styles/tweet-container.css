@@ -2,6 +2,8 @@
   border: 3px solid rgb(71, 71, 71);
   margin: 40px 0px;
   background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
 }
 
 .tweet-container header {
@@ -21,4 +23,27 @@
   margin-left: 23em;
   font-weight: 600;
   color: rgb(170, 170, 170);
+}
+
+.tweet-container article {
+  width: 98%;
+  margin: auto;
+  padding-bottom: 2em;
+  border-bottom: 3px solid rgb(71, 71, 71);
+  font-weight: 400;
+}
+
+.tweet-container footer {
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-icons a {
+  padding-right: 10px;
+  color: #4055a1;
+}
+
+.small-icons a:hover {
+  color: #caa347;
 }
