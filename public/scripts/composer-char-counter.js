@@ -1,24 +1,24 @@
 $(document).ready(function () {
   console.log("meeee");
-  let characterCount;
 
   $(".input-bar").on("keyup", function () {
     
     const counter = $(".counter");
-    characterCount = 140 - this.value.length;
-    
-    counter.html(characterCount);
+    console.log(counter);
+    const characterCount = 140 - $(this).val().length;
+
+    counter.text(characterCount);
 
     if (characterCount < 0) {
-      $(".counter").css("color", "red");
+      counter.addClass("red");
     } else {
-      $(".counter").css("color", "#545149");
+      counter.removeClass("red");
     }
     
   });
 
-  // $(".tweet-button").on("click", function () {
-  //   console.log(characterCount);
-  //   console.log(this);
-  // });
+  $(".tweet-button").on("click", function () {
+    console.log(characterCount);
+    console.log(this);
+  });
 });
