@@ -23,8 +23,9 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
@@ -54,9 +55,15 @@
           <input name="text" id="tweet-text" placeholder="What are you humming about?" class="input-bar"></input>
           <div class="buttons">
             <button class="tweet-button" type="submit">Tweet</button>
-            <button class="counter" name="counter" class="counter" form="tweet-text">140</button>
+            <p class="counter" name="counter" form="tweet-text">140</p>
           </div>
         </form>
+      </section>
+
+      <section class="tweet-container">
+        <header></header>
+        <div></div>
+        <footer></footer>
       </section>
     </main>
   </body>
