@@ -10,6 +10,7 @@ $(document).ready(function () {
     const counter = $(counterElement);
     const characterCount = 140 - $(this).val().length;
 
+    // display in HTML
     counter.text(characterCount);
 
     if (characterCount < 0) {
@@ -18,9 +19,13 @@ $(document).ready(function () {
       counter.removeClass("red");
     }
     
+    // $(".tweet-button").on("click", function () {
+    //   console.log(characterCount);
+    //   console.log(this);
+
+    //   if (characterCount < 0) {}
+    // });
+
   });
 
-  // $(".tweet-button").on("click", function () {
-  //   console.log(this);
-  // });
 });

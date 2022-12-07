@@ -7,34 +7,8 @@
 $(document).ready(function () {
   console.log("new beenz");
 
-  
-  // Test / driver code (temporary). Eventually will get this from the server.
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-  
-  const createTweetElement = function(tweetData) {
+  // Convert Input Text into Tweet
+  const createTweetElement = function (tweetData) {
     // create tweet element
     const tweet = $(`
     <div class="tweet-container">
@@ -45,7 +19,7 @@ $(document).ready(function () {
       </header>
       <article class="tweet">${tweetData.content.text}</article>
       <footer>
-        <div>${tweetData.created_at}</div>
+        <div>${timeago.format(tweetData.created_at)}</div>
         <div class="small-icons">
           <a><i class="fa-solid fa-flag"></i></a>
           <a><i class="fa-solid fa-repeat"></i></a>
@@ -55,31 +29,64 @@ $(document).ready(function () {
     </div>
     `);
     return tweet;
-  }
+  };
 
-  const renderTweets = function(tweets) {
+  // Render All Loaded Tweets in single page
+  const renderTweets = function (tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
     // get return value and append it to tweets container
 
-    tweets.forEach(element => {
+    tweets.forEach((element) => {
       const $tweet = createTweetElement(element);
       $("#tweets-container").prepend($tweet[0]);
     });
-  }
+  };
 
-  renderTweets(data);
+  // load tweets from server
+  const loadTweets = function () {
+    // AJAX function sends loaded data to renderTweets
+    $.ajax("/tweets", { method: "GET" }).then(function (data) {
+      renderTweets(data);
+    });
+  };
+
+  const validation = (data) => {
+    if (!data) {
+      return false;
+    }
+
+    if (data.length > 140) {
+      return false;
+    }
+
+    return true;
+  };
+
+  // initial load function
+  loadTweets();
 
   // this section dictates what to do after 'submit' has been pressed.
-  $("#new-tweet-form").submit(function(event) {
+  $("form").submit(function (event) {
     event.preventDefault();
-    
-    // convert JSON data to query-text format
-    const serializedData = $(this).serialize();
-    // console.log(serializedData);
 
-    // jQuery AJAX post request
-    $.post("/tweets", serializedData);
+    const inputData = $(".input-bar").val();
+    // console.log("input box", length);
+
+    const isValid = validation(inputData);
+    console.log(isValid);
+
+    if (isValid) {
+      // convert JSON data to query-text format
+      const serializedData = $(this).serialize();
+      console.log(serializedData);
+
+      // jQuery AJAX post request
+      $.post("/tweets", serializedData).then(() => {
+        loadTweets();
+      });
+    } else {
+      alert("Baaaaaaah")
+    }
   });
-
 });
