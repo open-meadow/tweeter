@@ -20,17 +20,17 @@
 }
 
 .image {
-  width: 100px;
-  height: 100px;
+  width: 3em;
+  height: 3em;
 }
 
 .username{
-  margin-top: 0px;
+  margin-top: 1em;
   margin-right: 30em;
 }
 
-.hashtag{
-  margin-top: 0px;
+.handle{
+  margin-top: 1em;
   margin-left: 23em;
   font-weight: 600;
   color: rgb(170, 170, 170);
@@ -40,12 +40,14 @@
   width: 98%;
   margin: auto;
   padding-bottom: 2em;
-  border-bottom: 3px solid rgb(71, 71, 71);
   font-weight: 400;
 }
 
 .tweet-container footer {
   padding: 1%;
+  width: 98%;
+  margin-left: 0.5em;
+  border-top: 3px solid rgb(71, 71, 71);
   display: flex;
   justify-content: space-between;
 }
