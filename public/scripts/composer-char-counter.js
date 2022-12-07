@@ -20,8 +20,7 @@ $(document).ready(function () {
     
   });
 
-  $(".tweet-button").on("click", function () {
-    console.log(characterCount);
-    console.log(this);
-  });
+  // $(".tweet-button").on("click", function () {
+  //   console.log(this);
+  // });
 });

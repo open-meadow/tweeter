@@ -64,14 +64,22 @@ $(document).ready(function () {
 
     tweets.forEach(element => {
       const $tweet = createTweetElement(element);
-      $("#tweets-container").append($tweet[0]);
+      $("#tweets-container").prepend($tweet[0]);
     });
   }
 
   renderTweets(data);
 
-  // // Test / driver code (temporary)
-  // console.log($tweet[0]); // to see what it looks like
-  // $("#tweets-container").append($tweet[0]); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  // this section dictates what to do after 'submit' has been pressed.
+  $("#new-tweet-form").submit(function(event) {
+    event.preventDefault();
+    
+    // convert JSON data to query-text format
+    const serializedData = $(this).serialize();
+    // console.log(serializedData);
+
+    // jQuery AJAX post request
+    $.post("/tweets", serializedData);
+  });
 
 });
