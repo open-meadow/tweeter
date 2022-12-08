@@ -38,58 +38,64 @@
       </div>
     </nav>
 
-    <header class="top-header">
-      <div>
-        <img class="profile-pic" src="/images/profile-hex.png">
-      </div>
-      <br>
-      <div>
-        <h2 class="name">Your Name</h2>
-      </div>
-    </header>
+    <div class="header-and-main">
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-
-      
-      <!--New Tweet Form-->
-      <section class="new-tweet">
-        <div class='error-message'></div>
-        <h2>Compose tweet</h2>
-        <form id="new-tweet-form" method="POST" action="/tweets">
-          <input name="text" id="tweet-text" placeholder="What are you humming about?" class="input-bar"></input>
-          <div class="buttons">
-            <button class="tweet-button" type="submit">Tweet</button>
-            <p class="counter" name="counter" form="tweet-text">140</p>
-          </div>
-        </form>
-      </section>
-
-      <!--Existing tweet containers-->
-      <section id="tweets-container">
-
-        <div class="tweet-container">
-          <header>
-            <img class="image" src="https://i.imgur.com/73hZDYK.png"></img>
-            <p class="username">Newton</p>
-            <p class="handle">@SirIssac</p>
-          </header>
-          <article class="tweet">If I have seen further, it is by standing on the shoulders of giants.</article>
-          <footer>
-            <div>10 days ago</div>
-            <div class="small-icons">
-              <a><i class="fa-solid fa-flag"></i></a>
-              <a><i class="fa-solid fa-repeat"></i></a>
-              <a><i class="fa-solid fa-heart"></i></a>
-            </div>
-          </footer>
+      <header class="top-header">
+        <div>
+          <img class="profile-pic" src="/images/profile-hex.png">
         </div>
+        <br>
+        <div>
+          <h2 class="name"><strong>Amy</strong> Mansell</h2>
+        </div>
+      </header>
+  
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+  
         
-      </section>
+        <!--New Tweet Form-->
+        <section class="new-tweet">
+          <div class='error-message'></div>
+          <h2>Compose tweet</h2>
+          <form id="new-tweet-form" method="POST" action="/tweets">
+            <input name="text" id="tweet-text" placeholder="What are you humming about?" class="input-bar"></input>
+            <div class="buttons">
+              <button class="tweet-button" type="submit">Tweet</button>
+              <p class="counter" name="counter" form="tweet-text">140</p>
+            </div>
+          </form>
+        </section>
+  
+        <!--Existing tweet containers-->
+        <section id="tweets-container">
+  
+          <!-- <div class="tweet-container">
+            <header>
+              <img class="image" src="https://i.imgur.com/73hZDYK.png"></img>
+              <p class="username">Newton</p>
+              <p class="handle">@SirIssac</p>
+            </header>
+            <article class="tweet">If I have seen further, it is by standing on the shoulders of giants.</article>
+            <footer>
+              <div>10 days ago</div>
+              <div class="small-icons">
+                <a><i class="fa-solid fa-flag"></i></a>
+                <a><i class="fa-solid fa-repeat"></i></a>
+                <a><i class="fa-solid fa-heart"></i></a>
+              </div>
+            </footer>
+          </div> -->
+          
+        </section>
+  
+        <!--New button-->
+        <button id="go-up-button"><i class="fa-solid fa-chevron-up"></i></button>
+  
+      </main>
 
-      <!--New button-->
-      <button id="go-up-button"><i class="fa-solid fa-chevron-up"></i></button>
+    </div>
 
-    </main>
+   
   </body>
 </html>

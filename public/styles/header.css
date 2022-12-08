@@ -3,7 +3,7 @@
 .top-header {
   font-family: 'Source Sans Pro', sans-serif;
   height: 400px;
-  padding-top: 10px;
+  padding-top: 2.5em;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,4 +14,15 @@
 
 .name {
   margin: auto;
+  color: floralwhite;
+  font-weight:400;
+}
+
+@media only screen and (min-width: 1024px) {
+  .top-header {
+    height: 20em;
+    width: 20em;
+    margin-top: 1.7em;
+    margin-right: 1em;
+  }
 }

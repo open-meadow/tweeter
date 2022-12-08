@@ -4,6 +4,7 @@
   background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .tweet-container:hover {
@@ -22,6 +23,7 @@
   display: flex;
   width: 93%;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 
@@ -32,7 +34,7 @@
 }
 
 .username{
-  width: 500px;
+  width: auto;
 }
 
 .handle{
@@ -64,4 +66,14 @@
 
 .small-icons a:hover {
   color: #caa347;
+}
+
+@media only screen and (min-width: 1024px) {
+  .tweet-container {
+    width: auto;
+  }
+
+  .username {
+    width: auto;
+  }
 }
