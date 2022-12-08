@@ -26,17 +26,18 @@
   flex-wrap: wrap;
 }
 
+
 .image {
   width: 80px;
   height: 80px;
   margin-right: 1em;
 }
 
-.username {
+.username{
   width: auto;
 }
 
-.handle {
+.handle{
   font-weight: 600;
   color: rgb(170, 170, 170);
 }
@@ -71,6 +72,7 @@
   .tweet-container {
     width: auto;
   }
+
   .username {
     width: auto;
   }

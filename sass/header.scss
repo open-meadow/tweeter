@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
 .top-header {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   height: 400px;
   padding-top: 2.5em;
   width: 100%;
@@ -14,7 +15,7 @@
 .name {
   margin: auto;
   color: floralwhite;
-  font-weight: 400;
+  font-weight:400;
 }
 
 @media only screen and (min-width: 1024px) {

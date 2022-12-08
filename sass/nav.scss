@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
+$font-stack: 'Source Sans Pro', sans-serif;
+
 nav {
   height: 120px;
   width: 100%;
@@ -11,13 +14,13 @@ nav {
   position: sticky;
   top: 0px;
   z-index: 3;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $font-stack;
 }
 
 nav span {
   display: flex;
   align-items: center;
-  font-family: "Bungee", cursive;
+  font-family: 'Bungee', cursive;
 }
 
 .nav-text {

@@ -3,11 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap");
+
 html {
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -17,10 +18,12 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+
   /* declare common font */
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
@@ -29,6 +32,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 .container {
   width: 90%;
   margin: auto;
@@ -59,17 +63,21 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+
   body {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .header-and-main {
     width: 95%;
     margin-left: 5em;
+
     display: flex;
     justify-content: space-around;
   }
+
   .container {
     width: 50%;
   }

@@ -54,6 +54,7 @@ $(document).ready(function () {
   // load tweets from server
   const loadTweets = function () {
     // AJAX function sends loaded data to renderTweets
+    $("#tweets-container").empty();
     $.ajax("/tweets", { method: "GET" }).then(function (data) {
       renderTweets(data);
     });
