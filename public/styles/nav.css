@@ -27,3 +27,16 @@ nav span {
   justify-content: center;
   align-items: center;
 }
+
+.nav-text:hover {
+  background-color: #4163a1;
+  padding: 0 20px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.nav-text i:hover {
+  color: red;
+  margin-top: 1em;
+  transition: 1s ease-in;
+}

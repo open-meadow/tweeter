@@ -40,3 +40,15 @@ body {
 .red {
   color: red;
 }
+
+#go-up-button {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  background-color: tomato;
+  text-align: center;
+  padding: 2%;
+  border: none;
+  border-radius: 50%;
+  color: floralwhite;
+}

@@ -51,10 +51,10 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
-      <div class='error-message'></div>
-
+      
       <!--New Tweet Form-->
       <section class="new-tweet">
+        <div class='error-message'></div>
         <h2>Compose tweet</h2>
         <form id="new-tweet-form" method="POST" action="/tweets">
           <input name="text" id="tweet-text" placeholder="What are you humming about?" class="input-bar"></input>
@@ -86,6 +86,9 @@
         </div>
         
       </section>
+
+      <!--New button-->
+      <button id="go-up-button"><i class="fa-solid fa-chevron-up"></i></button>
 
     </main>
   </body>

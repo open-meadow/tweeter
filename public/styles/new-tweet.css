@@ -1,3 +1,7 @@
+.new-tweet {
+  display: none;
+}
+
 .input-bar {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #f4f1ec;
@@ -26,6 +30,11 @@
   font-family: 'Bungee', cursive;
   height: 50px;
   padding: 0 10px;
+}
+
+.tweet-button:hover {
+  cursor: pointer;
+  background-color: #4163a1;
 }
 
 .counter {

@@ -60,6 +60,16 @@ $(document).ready(function () {
   // initial load function
   loadTweets();
 
+  // this section loads the 'new tweets' input once the button is pressed
+  $(".nav-text").click(() => {
+    if($(".new-tweet").is(":visible")) {
+      $(".new-tweet").slideUp();
+    } else {
+      $(".new-tweet").slideDown();
+    }
+  })
+
+
   // this section dictates what to do after 'submit' has been pressed.
   $("form").submit(function (event) {
     event.preventDefault();
