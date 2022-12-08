@@ -18,14 +18,21 @@ $(document).ready(function () {
     } else {
       counter.removeClass("red");
     }
-    
-    // $(".tweet-button").on("click", function () {
-    //   console.log(characterCount);
-    //   console.log(this);
+  });
 
-    //   if (characterCount < 0) {}
-    // });
+  $(window).scroll(function() {
+    if($(window).scrollTop() > 300) {
+      $("#go-up-button").fadeIn();
+      $("nav").fadeOut();
+    } else {
+      $("#go-up-button").fadeOut();
+      $("nav").fadeIn();
+    }
+  });
 
+  $("#go-up-button").click(function() {
+    $("html, body").animate({scrollTop:0}, 300);
+    $(".new-tweet").slideDown();
   });
 
 });
