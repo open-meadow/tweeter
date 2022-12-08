@@ -4,7 +4,9 @@ Tweeter is a simple, single-page Twitter clone built using HTML, CSS, JS, jQuery
 This app has strict content moderation policies. Any hate-speech posted gets deleted the second you shut down the server.
 
 ## Screenshots
-
+!["Screenshot of Page in Desktop View"](https://github.com/open-meadow/tinyapp/blob/master/docs/urls-page.png)
+!["Screenshot of Page in Mobile View"](https://github.com/open-meadow/tinyapp/blob/master/docs/single-url-page.png)
+!["Screenshot of Scroll-to-Top button"](https://github.com/open-meadow/tinyapp/blob/master/docs/create-new-url-page.png)
 
 ## Dependencies
 
