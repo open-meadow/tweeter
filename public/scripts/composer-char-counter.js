@@ -20,16 +20,19 @@ $(document).ready(function () {
     }
   });
 
+  // this section scrolls to reveal scroll-up button
   $(window).scroll(function() {
     if($(window).scrollTop() > 300) {
-      $("nav").fadeOut();
-      $("#go-up-button").fadeIn();
+      // stop() prevents blinking
+      $("nav").stop().fadeOut();
+      $("#go-up-button").stop().fadeIn();
     } else {
-      $("nav").fadeIn();
-      $("#go-up-button").fadeOut();
+      $("nav").stop().fadeIn();
+      $("#go-up-button").stop().fadeOut();
     }
   });
 
+  // this section makes the window go up when the button is pressed
   $("#go-up-button").click(function() {
     $("html, body").animate({scrollTop:0}, 300);
     $(".new-tweet").slideDown();
