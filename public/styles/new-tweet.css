@@ -36,4 +36,9 @@
   display: none;
   color: red;
   font-weight: 600;
+  margin: auto;
+  margin-top: 1em;
+  border: 3px solid red;
+  text-align: left;
+  padding: 1em;
 }
