@@ -16,31 +16,36 @@
   height: auto;
   padding: 1em;
   display: flex;
+}
+
+.tweet-container header div {
+  display: flex;
+  width: 93%;
   justify-content: space-between;
 }
 
+
 .image {
-  width: 3em;
-  height: 3em;
+  width: 80px;
+  height: 80px;
+  margin-right: 1em;
 }
 
 .username{
-  margin-top: 1em;
-  margin-right: 30em;
+  width: 500px;
 }
 
 .handle{
-  margin-top: 1em;
-  margin-left: 23em;
   font-weight: 600;
   color: rgb(170, 170, 170);
 }
 
 .tweet-container article {
-  width: 98%;
+  width: 95%;
   margin: auto;
   padding-bottom: 2em;
   font-weight: 400;
+  word-wrap: break-word;
 }
 
 .tweet-container footer {

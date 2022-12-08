@@ -20,8 +20,10 @@ $(document).ready(function () {
     <div class="tweet-container">
       <header>
         <img class="image" src=${tweetData.user.avatars}"></img>
-        <p class="username">${tweetData.user.name}</p>
-        <p class="handle">${tweetData.user.handle}</p>
+        <div>
+          <p class="username">${tweetData.user.name}</p>
+          <p class="handle">${tweetData.user.handle}</p>
+        </div>
       </header>
       <article class="tweet">${escape(tweetData.content.text)}</article>
       <footer>
