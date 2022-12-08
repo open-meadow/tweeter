@@ -100,12 +100,15 @@ $(document).ready(function () {
     if (isValid) {
       // convert JSON data to query-text format
       const serializedData = $(this).serialize();
-      console.log(serializedData);
 
       // jQuery AJAX post request
       $.post("/tweets", serializedData).then(() => {
         loadTweets();
       });
+
+      // reset text-box and counter
+      $(".input-bar").val("");
+      $(".counter").html(140);
     }
   });
 });

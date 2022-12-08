@@ -22,11 +22,11 @@ $(document).ready(function () {
 
   $(window).scroll(function() {
     if($(window).scrollTop() > 300) {
-      $("#go-up-button").fadeIn();
       $("nav").fadeOut();
+      $("#go-up-button").fadeIn();
     } else {
-      $("#go-up-button").fadeOut();
       $("nav").fadeIn();
+      $("#go-up-button").fadeOut();
     }
   });
 
