@@ -31,3 +31,9 @@
 .counter {
   font-family: 'Bungee', cursive;
 }
+
+.error-message {
+  display: none;
+  color: red;
+  font-weight: 600;
+}

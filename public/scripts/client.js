@@ -7,6 +7,12 @@
 $(document).ready(function () {
   console.log("new beenz");
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   // Convert Input Text into Tweet
   const createTweetElement = function (tweetData) {
     // create tweet element
@@ -17,7 +23,7 @@ $(document).ready(function () {
         <p class="username">${tweetData.user.name}</p>
         <p class="handle">${tweetData.user.handle}</p>
       </header>
-      <article class="tweet">${tweetData.content.text}</article>
+      <article class="tweet">${escape(tweetData.content.text)}</article>
       <footer>
         <div>${timeago.format(tweetData.created_at)}</div>
         <div class="small-icons">
@@ -51,31 +57,33 @@ $(document).ready(function () {
     });
   };
 
-  const validation = (data) => {
-    if (!data) {
-      return false;
-    }
-
-    if (data.length > 140) {
-      return false;
-    }
-
-    return true;
-  };
-
   // initial load function
   loadTweets();
 
   // this section dictates what to do after 'submit' has been pressed.
   $("form").submit(function (event) {
     event.preventDefault();
+    $(".error-message").slideUp();
 
+    // get length of typed in text
     const inputData = $(".input-bar").val();
-    // console.log("input box", length);
 
-    const isValid = validation(inputData);
-    console.log(isValid);
+    // check if user has valid input
+    let isValid = true;
 
+    if (!inputData) {
+      $(".error-message").text("You need to input something");
+      $(".error-message").slideDown(1000);
+      isValid = false;
+    }
+
+    if (inputData.length > 140) {
+      $(".error-message").text("You went over 140 characters");
+      $(".error-message").slideDown(1000);
+      isValid = false;
+    }
+
+    // if input is valid, perform operation
     if (isValid) {
       // convert JSON data to query-text format
       const serializedData = $(this).serialize();
@@ -85,8 +93,6 @@ $(document).ready(function () {
       $.post("/tweets", serializedData).then(() => {
         loadTweets();
       });
-    } else {
-      alert("Baaaaaaah")
     }
   });
 });
