@@ -7,11 +7,11 @@
 $(document).ready(function () {
   console.log("new beenz");
 
-  const escape = function(str) {
+  const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   // Convert Input Text into Tweet
   const createTweetElement = function (tweetData) {
@@ -41,10 +41,6 @@ $(document).ready(function () {
 
   // Render All Loaded Tweets in single page
   const renderTweets = function (tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // get return value and append it to tweets container
-
     tweets.forEach((element) => {
       const $tweet = createTweetElement(element);
       $("#tweets-container").prepend($tweet[0]);
@@ -65,13 +61,12 @@ $(document).ready(function () {
 
   // this section loads the 'new tweets' input once the button is pressed
   $(".nav-text").click(() => {
-    if($(".new-tweet").is(":visible")) {
+    if ($(".new-tweet").is(":visible")) {
       $(".new-tweet").slideUp();
     } else {
       $(".new-tweet").slideDown();
     }
-  })
-
+  });
 
   // this section dictates what to do after 'submit' has been pressed.
   $("form").submit(function (event) {
@@ -88,13 +83,17 @@ $(document).ready(function () {
     let isValid = true;
 
     if (!inputData) {
-      $(".error-message").html("<i class='fa-solid fa-circle-exclamation'></i> &emsp;Please input some text.");
+      $(".error-message").html(
+        "<i class='fa-solid fa-circle-exclamation'></i> &emsp;Please input some text."
+      );
       $(".error-message").slideDown(400);
       isValid = false;
     }
 
     if (inputData.length > 140) {
-      $(".error-message").html("<i class='fa-solid fa-circle-exclamation'></i> &emsp;Please stay under 140 characters.");
+      $(".error-message").html(
+        "<i class='fa-solid fa-circle-exclamation'></i> &emsp;Please stay under 140 characters."
+      );
       $(".error-message").slideDown(400);
       isValid = false;
     }

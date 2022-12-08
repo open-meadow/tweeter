@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap");
 
-$font-stack: 'Source Sans Pro', sans-serif;
+$font-stack: "Source Sans Pro", sans-serif;
+$nav-background-color: #4056a1;
 
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056a1;
-  color: #FFFFFF;
+  background-color: $nav-background-color;
+  color: #ffffff;
   padding-left: 1.5em;
   padding-right: 1.5em;
   display: flex;
@@ -15,12 +16,12 @@ nav {
   top: 0px;
   z-index: 3;
   font-family: $font-stack;
-}
 
-nav span {
-  display: flex;
-  align-items: center;
-  font-family: 'Bungee', cursive;
+  span {
+    display: flex;
+    align-items: center;
+    font-family: "Bungee", cursive;
+  }
 }
 
 .nav-text {

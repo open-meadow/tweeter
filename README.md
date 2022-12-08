@@ -1,18 +1,29 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone built using HTML, CSS, JS, jQuery, AJAX, Node and Express.
+This app has strict content moderation policies. Any hate-speech posted gets deleted the second you shut down the server.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Screenshots
 
-## Getting Started
-
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+- md5
+- Nodemon
+
+## Getting Started
+
+- You need to have Node JS installed on your computer. You can download it at (https://nodejs.org/en/).
+- Once you have Node JS, go to your desired folder, open the terminal or command prompt, and type <code>git clone git@github.com:open-meadow/tinyapp.git tinyapp</code>, if you have git. Alternatively, you can download the ZIP file and extract it to your desired folder.
+- Once done, navigate to the folder containing the downloaded code, and open your terminal or command prompt in the same folder ( Windows users, click on the empty space on the box beside the search bar and type 'cmd'). Type `npm install` Windows users may need to run cmd as administrator.
+- Once installed, type `npm start` and click `Enter`.
+- Go to your favourite web browser, and type `localhost:8080` in the address bar. Hit `Enter`. You should be able to access the website.
+
+## Known Bugs
+
+- Will learn once used by other users. 
+

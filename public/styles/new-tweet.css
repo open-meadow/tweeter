@@ -1,8 +1,7 @@
 .new-tweet {
   display: none;
 }
-
-.input-bar {
+.new-tweet .input-bar {
   font-family: "Source Sans Pro", sans-serif;
   background-color: #f4f1ec;
   width: 100%;
@@ -12,36 +11,30 @@
   outline: none;
   border-bottom: 3px solid rgb(71, 71, 71);
 }
-
-.input-bar::placeholder {
+.new-tweet .input-bar::placeholder {
   color: #545149;
 }
-
-.buttons {
+.new-tweet .buttons {
   margin-top: 1.5%;
   border: none;
   display: flex;
   justify-content: space-between;
 }
-
-.tweet-button {
+.new-tweet .tweet-button {
   background-color: #4152a1;
   color: white;
   font-family: "Bungee", cursive;
   height: 50px;
   padding: 0 10px;
 }
-
-.tweet-button:hover {
+.new-tweet .tweet-button:hover {
   cursor: pointer;
   background-color: #283968;
 }
-
-.counter {
+.new-tweet .counter {
   font-family: "Bungee", cursive;
 }
-
-.error-message {
+.new-tweet .error-message {
   display: none;
   color: red;
   font-weight: 600;
