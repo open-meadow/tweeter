@@ -5,8 +5,11 @@ This app has strict content moderation policies. Any hate-speech posted gets del
 
 ## Screenshots
 !["Screenshot of Page in Desktop View"](https://github.com/open-meadow/tweeter/blob/master/public/docs/main-page-desktop.png)
+Desktop View
 !["Screenshot of Page in Mobile View"](https://github.com/open-meadow/tweeter/blob/master/public/docs/main-page-mobile.png)
+Mobile View
 !["Screenshot of Scroll-to-Top button"](https://github.com/open-meadow/tweeter/blob/master/public/docs/scroll-to-top-button.png)
+Scroll-to-top button
 
 ## Dependencies
 
