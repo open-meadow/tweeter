@@ -3,7 +3,7 @@
 $font-stack: "Source Sans Pro", sans-serif;
 $nav-background-color: #4056a1;
 
-nav {
+@mixin nav {
   height: 120px;
   width: 100%;
   background-color: $nav-background-color;
@@ -16,6 +16,10 @@ nav {
   top: 0px;
   z-index: 3;
   font-family: $font-stack;
+}
+
+nav {
+  @include nav;
 
   span {
     display: flex;
