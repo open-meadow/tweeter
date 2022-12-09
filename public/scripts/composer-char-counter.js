@@ -27,7 +27,7 @@ const onInput = function (event) {
 };
 
 // this section scrolls to reveal scroll-up button
-const scrollWindow = () => {
+const scrollWindow = function() {
   if ($(window).scrollTop() > 300) {
     // stop() prevents blinking
     $("nav").stop().fadeOut();
@@ -39,7 +39,7 @@ const scrollWindow = () => {
 };
 
 // this section makes the window go up when the button is pressed
-const goUp = (event) => {
+const goUp = function(event) {
   $("html, body").animate({ scrollTop: 0 }, 300);
   $(".new-tweet").slideDown();
 };
