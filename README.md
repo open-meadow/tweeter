@@ -30,5 +30,5 @@ Scroll-to-top button
 
 ## Known Bugs
 
-- Will learn once used by other users. 
+- Visual error - If user input returns an error, and the very next input causes a different error, the error message immediately changes before sliding up. Does not affect functionality.
 
