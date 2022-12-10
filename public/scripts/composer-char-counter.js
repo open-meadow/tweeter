@@ -1,45 +1,32 @@
-$(document).ready(function () {
-  $(".input-bar").on("input", onInput);
-  $(window).scroll(scrollWindow);
-  $("#go-up-button").click(goUp);
-});
+(function () {
 
-const onInput = function (event) {
-  const $inputElement = $(this);
-  const divButtonsElement = $inputElement.next()[0];
-  const $divButtonsElement = $(divButtonsElement);
-  const counterElement = $divButtonsElement.find(".counter")[0];
+  // jquery ready function
+  $(document).ready(function () {
+    $(".input-bar").on("input", onInput);
+    $(window).scroll(scrollWindow);
+    $("#go-up-button").click(goUp);
+  });
 
-  const counter = $(counterElement);
+  // changes character counter
+  const onInput = function (event) {
+    const $inputElement = $(this);
+    const divButtonsElement = $inputElement.next()[0];
+    const $divButtonsElement = $(divButtonsElement);
+    const counterElement = $divButtonsElement.find(".counter")[0];
 
-  // number of characters user has input
-  let len = $(this).val().length;
-  const characterCount = 140 - len;
+    const counter = $(counterElement);
 
-  // display in HTML
-  counter.text(characterCount);
+    // number of characters user has input
+    let len = $(this).val().length;
+    const characterCount = 140 - len;
 
-  if (characterCount < 0) {
-    counter.addClass("red");
-  } else {
-    counter.removeClass("red");
-  }
-};
+    // display in HTML
+    counter.text(characterCount);
 
-// this section scrolls to reveal scroll-up button
-const scrollWindow = function() {
-  if ($(window).scrollTop() > 300) {
-    // stop() prevents blinking
-    $("nav").stop().fadeOut();
-    $("#go-up-button").stop().fadeIn();
-  } else {
-    $("nav").stop().fadeIn();
-    $("#go-up-button").stop().fadeOut();
-  }
-};
-
-// this section makes the window go up when the button is pressed
-const goUp = function(event) {
-  $("html, body").animate({ scrollTop: 0 }, 300);
-  $(".new-tweet").slideDown();
-};
+    if (characterCount < 0) {
+      counter.addClass("red");
+    } else {
+      counter.removeClass("red");
+    }
+  };
+})();

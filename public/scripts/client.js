@@ -4,9 +4,15 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function () {
-  console.log("new beenz");
+(function () {
+  $(document).ready(function () {
+    // initial load function
+    loadTweets();
 
+    $("form").submit(submitTweet);
+  });
+
+  // Escape XSS attempts
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -41,35 +47,24 @@ $(document).ready(function () {
 
   // Render All Loaded Tweets in single page
   const renderTweets = function (tweets) {
+    const $container = $("#tweets-container").empty();
+
     tweets.forEach((element) => {
       const $tweet = createTweetElement(element);
-      $("#tweets-container").prepend($tweet[0]);
+      $container.prepend($tweet[0]);
     });
   };
 
   // load tweets from server
   const loadTweets = function () {
     // AJAX function sends loaded data to renderTweets
-    $("#tweets-container").empty();
-    $.ajax("/tweets", { method: "GET" }).then(function (data) {
+    $.get("/tweets").then(function (data) {
       renderTweets(data);
     });
   };
 
-  // initial load function
-  loadTweets();
-
-  // this section loads the 'new tweets' input once the button is pressed
-  $(".nav-text").click(() => {
-    if ($(".new-tweet").is(":visible")) {
-      $(".new-tweet").slideUp();
-    } else {
-      $(".new-tweet").slideDown();
-    }
-  });
-
   // this section dictates what to do after 'submit' has been pressed.
-  $("form").submit(function (event) {
+  const submitTweet = function (event) {
     event.preventDefault();
 
     // hides the error message when the 'submit' button is clicked
@@ -109,8 +104,7 @@ $(document).ready(function () {
       });
 
       // reset text-box and counter
-      $(".input-bar").val("");
-      $(".counter").html(140);
+      $(".input-bar").val("").trigger("input");
     }
-  });
-});
+  };
+})();
